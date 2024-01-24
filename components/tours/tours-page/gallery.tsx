@@ -1,19 +1,15 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import {
-  Dialog,
-  DialogContent, 
-  DialogTrigger,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import {
   Carousel,
   CarouselContent,
-  CarouselItem, 
-} from "@/components/ui/carousel"; 
+  CarouselItem,
+} from "@/components/ui/carousel";
 import useKeypress from "react-use-keypress";
 import { Button } from "@/components/ui/button";
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons"; 
 
 export default function Gallery({
   galleryImages,
@@ -71,7 +67,7 @@ export default function Gallery({
                     className="cursor-pointer overflow-hidden"
                   >
                     <Image
-                      className="max-w-full hover:scale-105 overflow-hidden"
+                      className="max-w-full object-cover hover:scale-105 overflow-hidden"
                       src={slide}
                       alt="image"
                       width="640"

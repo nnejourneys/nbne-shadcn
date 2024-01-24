@@ -12,6 +12,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Testimonials() {
   return (
@@ -26,11 +27,15 @@ export default function Testimonials() {
           width="30"
           height="30"
         />
-        <Carousel 
+        <Carousel
           opts={{
-            align: "start",
             loop: true,
           }}
+          plugins={[
+            Autoplay({
+              delay: 15000,
+            }),
+          ]}
         >
           <CarouselContent>
             {Testimonialdata.testimonials.map((item, index) => (
@@ -58,8 +63,8 @@ export default function Testimonials() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:inline-flex"/>
-          <CarouselNext className="hidden md:inline-flex"/>
+          <CarouselPrevious className="hidden md:inline-flex" />
+          <CarouselNext className="hidden md:inline-flex" />
         </Carousel>
       </Bounded>
     </>

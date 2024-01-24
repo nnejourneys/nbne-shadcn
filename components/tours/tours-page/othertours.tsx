@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -8,14 +8,28 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 export default function Othertours({ othertours }: any) {
   return (
     <>
-      <Carousel>
+      <Carousel
+        className="mx-5 md:mx-14 mb-20"
+        opts={{
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
+      >
         <CarouselContent>
           {othertours.map((item: any, index: number) => (
-            <CarouselItem key={index} className="basis-1/4 group">
+            <CarouselItem
+              key={index}
+              className="basis-full md:basis-1/2 lg:basis-1/3 xl:basis-1/4 group"
+            >
               <div className="relative">
                 <Image
                   className="img-fluid w-full"
@@ -38,8 +52,8 @@ export default function Othertours({ othertours }: any) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="hidden md:inline-flex"/>
+        <CarouselNext className="hidden md:inline-flex"/>
       </Carousel>
     </>
   );
