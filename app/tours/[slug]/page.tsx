@@ -33,7 +33,7 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const tour = allTours.find((tour) => tour.slug === params.slug);
   // if (!tour) throw new Error(`Tour does not exist! ${params.slug}`);
   if (!tour) {
-    return {}
+    return {};
   }
 
   return {
@@ -42,7 +42,7 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
     generator: "Next.js",
     referrer: "origin-when-cross-origin",
     keywords: tour.keywords,
-    authors: [{ name: "Roheen Browne" }, { name: "Mohan Kumar", url: "/" }], 
+    authors: [{ name: "Roheen Browne" }, { name: "Mohan Kumar", url: "/" }],
     creator: "Mohan Kumar",
     publisher: "Roheen Browne",
     metadataBase: new URL(`${BASE_PATH}`),
@@ -74,7 +74,7 @@ export default async function TourPage({
 }) {
   // const filepath = `tours/${params.slug}`;
   // const tour = allTours.find((tour) => tour._raw.flattenedPath === filepath);
-  
+
   const tour = allTours.find((tour) => tour.slug === params.slug);
 
   if (!tour) {
@@ -133,7 +133,7 @@ export default async function TourPage({
             <div className="grid lg:grid-cols-2 gap-4 mb-10">
               <div>
                 {tour.overs ? (
-                  <Tabs defaultValue="overview" className="w-fit mt-10">
+                  <Tabs defaultValue="overview" className="w-full mt-10">
                     <TabsList>
                       {tour.overs ? (
                         <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -258,14 +258,16 @@ export default async function TourPage({
               </h6>
               <Separator />
             </div>
-            <h4 className="text-semibold capitalize">
+
+            <Heading
+              variant="sectiontitlesm"
+              className="text-semibold capitalize"
+            >
               Other {tour.tourtype} tours
-            </h4>
-            {tour.othertours ? (
-              <Othertours othertours={tour.othertours} />
-            ) : null}
+            </Heading>
           </article>
         </Bounded>
+        {tour.othertours ? <Othertours othertours={tour.othertours} /> : null}
       </section>
     </>
   );
