@@ -13,7 +13,7 @@ import { Heading } from "@/components/styledcomps/heading";
 export default function TourHome({
   searchParams,
 }: {
-  searchParams: { [key: string]: string[] | undefined };
+  searchParams: { [key: string]: string | string[] | undefined };
 }) {
   const categoryVariants = ["active", "leisure", "culture"];
 
@@ -43,7 +43,7 @@ export default function TourHome({
       return filteredData;
     }
     const filteredTours = filteredData.filter(
-      (tour: Tours) => tour.category === selectedCategory[0]
+      (tour: Tours) => tour.category === selectedCategory
     );
     return filteredTours;
   };
