@@ -1,0 +1,27 @@
+{
+    "category": [
+    { "url": "active", "name": "Active" },
+    { "url": "leisure", "name": "Leisure" },
+    { "url": "culture", "name": "Culture" }
+    ],
+    "active":[
+    { "url": "", "name": "All" },
+    {"url": "cycling", "name": "Cycling"},
+    {"url":"trekking", "name": "Trekking"},
+    {"url": "multi-activity", "name": "Multi Ativity"},
+    {"url": "overland", "name": "Overland"}
+    ],
+    "leisure": [
+    { "url": "", "name": "All" },
+    { "url": "comfort", "name": "Comfort" },
+    { "url": "offbeat", "name": "Offbeat" },
+    { "url": "wildlife", "name": "Wildlife" },
+    { "url": "roadtrip", "name": "Roadtrip" }
+    ],
+    "culture": [
+    { "url": "", "name": "All" },
+    { "url": "arunachal", "name": "Arunachal Pradesh" },
+    { "url": "assam", "name": "Assam" },
+    { "url": "nagaland", "name": "Nagaland" }
+    ]
+}

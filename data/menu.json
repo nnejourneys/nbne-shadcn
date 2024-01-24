@@ -1,0 +1,126 @@
+{
+  "menu": {
+    "mainmenu": [
+      {
+        "name": "Home",
+        "URL": "/",
+        "weight": 1,
+        "id": 1
+      },
+      {
+        "name": "Tours",
+        "URL": "/tours",
+        "weight": 2,
+        "id": 2,
+        "children": [
+          {
+            "name": "All Tours",
+            "URL": "/tours",
+            "order": 1,
+            "id": 1
+          },
+          {
+            "name": "Departures",
+            "URL": "/tours/departures",
+            "order": 2,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "name": "About",
+        "URL": "/aboutus",
+        "weight": 3,
+        "id": 3,
+        "children": [
+          {
+            "name": "About Us",
+            "URL": "/aboutus",
+            "order": 1,
+            "id": 1
+          },
+          {
+            "name": "Team",
+            "URL": "/aboutus/team",
+            "order": 2,
+            "id": 2
+          },
+          {
+            "name": "Insights",
+            "URL": "/aboutus/insights",
+            "order": 3,
+            "id": 3
+          }
+        ]
+      },
+      {
+        "name": "Contact",
+        "URL": "/contact",
+        "weight": 4,
+        "id": 4
+      }
+    ],
+    "footer": [
+      {
+        "title": "Important Links",
+        "items": [
+          {
+            "name": "Responsible Tourism",
+            "URL": "/about-us",
+            "weight": 1
+          },
+          {
+            "name": "Insights",
+            "URL": "/about-us/insights",
+            "weight": 2
+          },
+          {
+            "name": "Terms and Conditions",
+            "URL": "/terms-and-conditions",
+            "weight": 3
+          },
+          {
+            "name": "Privacy Policy",
+            "URL": "/privacy-policy",
+            "weight": 4
+          },
+          {
+            "name": "Booking & Cancellation Policy",
+            "URL": "/booking-and-cancellation-policy",
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "title": "Quick Links",
+        "items": [
+          {
+            "name": "Home",
+            "URL": "/",
+            "weight": 1
+          },
+          {
+            "name": "Tours",
+            "URL": "/tours",
+            "weight": 2
+          },
+          {
+            "name": "About",
+            "URL": "/about-us",
+            "weight": 3
+          },
+          {
+            "name": "Blog",
+            "URL": "/posts",
+            "weight": 4
+          },
+          {
+            "name": "Contact",
+            "URL": "/contact",
+            "weight": 5
+          }
+        ]
+      }
+    ]
+  }
+}
