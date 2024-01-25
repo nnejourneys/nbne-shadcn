@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 export default function Copyright({ footerdata }: any) {
   return (
     <>
-      <div className="pt-5 pb-10 relative">
+      <div className="pt-5 pb-5 md:pb-10 relative text-center md:text-start">
         <p className="me-1 text-muted-foreground ">
           © {new Date().getFullYear()} {footerdata.copyright}
           <a

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { imgblurDataURL } from "@/lib/constants";
+import { Heading } from "@/components/styledcomps/heading";
 
 type TourProps = {
   title: string;
@@ -20,7 +21,7 @@ export default function TourCoverImage({
       alt={title}
       placeholder="blur"
       blurDataURL={imgblurDataURL}
-      className="z-10 bg-cover bg-center w-[100%] h-full"
+      className="z-10 bg-cover bg-center w-[100%] h-[60%] lg:h-full"
       // width={1920}
       // height={1080}
       fill
@@ -32,15 +33,18 @@ export default function TourCoverImage({
     />
   );
   return (
-    <div className="tour-cover-image h-[100vh] w-full bg-center bg-no-repeat relative z-10 ">
+    <div className="tour-cover-image w-full h-[60vh] lg:h-[100vh] bg-center bg-no-repeat relative z-10 ">
       <div className="tour-overlay absolute top-0 left-0 h-[100vh] w-full z-20 bg-black/20" />
       {coverImage}
       <div className="tour-content page absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-center z-30">
-        <h1 className="uppercase text-white  text-6xl font-bold text-center">
+        {/* <h1 className="uppercase text-white  text-3xl lg:text-6xl font-bold text-center">
           {title}
-        </h1>
+        </h1>  
         <h2 className="capitalize text-white text-3xl">{subtitle}</h2>
-        <h4 className="capitalize text-white text-xl">{days}</h4>
+        <h4 className="capitalize text-white text-xl">{days}</h4> */}
+        <Heading size="xl" variant="sectiontitlesm" className="font-bold">{title}</Heading>
+        <Heading size="md" variant="sectiontitlesm" className="font-semibold">{subtitle}</Heading>
+        <Heading size="sm" variant="sectiontitlesm" className=" ">{days}</Heading>
       </div>
     </div>
   );
