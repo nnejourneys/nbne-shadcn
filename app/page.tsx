@@ -8,7 +8,7 @@ import ToursSlider from "@/components/page-sections/tours-slider";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <HeroMain />
       <TourTypes />
       <ToursSlider />

@@ -54,7 +54,7 @@ export default function TourHome({
     <>
       <HeroPage />
       
-      <Bounded className="mb-5" width="marginxy">
+      <Bounded className="mb-5 px-5 md:px-10 lg:px-20" width="fluidmy">
         <Heading size="xl" variant="sectiontitle">
         Tours
       </Heading>

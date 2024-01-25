@@ -104,7 +104,7 @@ export default async function TourPage({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Bounded width="marginxy" className="mb-0">
+        <Bounded width="marginxy" className="mb-0 overflow-x-hidden">
           <article className="py-6 prose dark:prose-invert">
             {tour.description && (
               <p className="font-bold text-xl text-center my-10">
