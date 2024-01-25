@@ -70,7 +70,7 @@ export default function TourTypes() {
                   <CardContent>
                     <p className="text-justif pt-3 px-1 mb-5">{item.text}</p>
                     <Link href={item.url}>
-                      <Button aria-label={item.btnText} title={item.btnText}>{item.btnText}</Button>
+                      <Button id={item.btnText} aria-label={item.btnText} title={item.btnText}>{item.btnText}</Button>
                     </Link>
                   </CardContent>
                 </Card>

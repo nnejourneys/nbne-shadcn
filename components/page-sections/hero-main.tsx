@@ -43,25 +43,27 @@ export default function HeroMain() {
                   <Heading
                     size="sm"
                     variant="sectiontitlesm"
-                    className="text-white font-bold mb-1 text-shadow"
+                    className="text-white font-bold mb-1"
                     asChild={true}
                   >
-                    <h1>{item.title}</h1>
+                    <h1 className="text-shadow">{item.title}</h1>
                   </Heading>
-
                   <Heading
                     size="xxl"
                     variant="sectiontitlesm"
-                    className="text-white font-bold mb-3 text-shadow-md"
+                    className="text-white font-bold mb-3"
                   >
-                    {item.subtitle}
+                    <h2 className="text-shadow-md">{item.subtitle}</h2>
                   </Heading>
                   <Heading
                     size="sm"
                     variant="sectiontitlesm"
-                    className="text-white font-semibold mb-5 text-shadow"
+                    className="text-white font-semibold mb-5"
                   >
-                    {item.description}
+                    <h3 className=" text-shadow">
+                      {item.description}
+                    </h3>
+                    
                   </Heading>
                   <Button size="lg">
                     <Link href="/tours">Explore all tours</Link>

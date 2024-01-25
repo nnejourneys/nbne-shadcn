@@ -4,7 +4,7 @@ export default function Developer() {
   return (
     <>
       <div className="text-center">
-        <p className="text-xs m-0 font-sm text-muted-foreground/50">
+        <p className="text-xs m-0 font-sm text-foreground/50">
           Designed and Developed by
           <a
             className="hover:text-primary"
