@@ -19,7 +19,7 @@ export default function FooterIntro({footerdata}: any) {
         width="200"
         height="136"
       />
-      <p className="text-muted-foreground mt-3 mb-5 pe-5">{footerdata.content}</p>
+      <p className="text-foreground mt-3 mb-5 pe-5">{footerdata.content}</p>
     </>
   );
 }

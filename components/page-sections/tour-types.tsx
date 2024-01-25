@@ -70,28 +70,10 @@ export default function TourTypes() {
                   <CardContent>
                     <p className="text-justif pt-3 px-1 mb-5">{item.text}</p>
                     <Link href={item.url}>
-                      <Button>{item.btnText}</Button>
+                      <Button aria-label={item.btnText} title={item.btnText}>{item.btnText}</Button>
                     </Link>
                   </CardContent>
                 </Card>
-                {/* <h5 className="font-bold text-xl py-3">{item.title}</h5>
-                <div className="relative">
-                  <Image
-                    className="w-full"
-                    src={item.img}
-                    alt={item.title}
-                    placeholder="blur"
-                    blurDataURL={imgblurDataURL}
-                    width={240}
-                    height={170}
-                    sizes="30vw"
-                  />
-                </div>
-                <div className="p-0">
-                  <p className="text-justify card-text mx-2 mb-0 py-3 px-1">
-                    {item.text}
-                  </p>
-                </div> */}
               </motion.div>
             </div>
           ))}

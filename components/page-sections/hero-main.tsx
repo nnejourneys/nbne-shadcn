@@ -12,11 +12,12 @@ import {
 import Link from "next/link";
 import { Button } from "../ui/button";
 import Autoplay from "embla-carousel-autoplay";
+import { Heading } from "../styledcomps/heading";
 
 export default function HeroMain() {
   return (
     <>
-      <Carousel 
+      <Carousel
         opts={{
           align: "start",
           loop: true,
@@ -39,15 +40,29 @@ export default function HeroMain() {
                   priority={item.load}
                 />
                 <div className="absolute top-[40%] left-[10%]">
-                  <motion.h3 className="text-white font-bold text-md lg:text-xl mb-1 text-shadow">
-                    {item.title}
-                  </motion.h3>
-                  <motion.h1 className="text-white font-bold text-4xl lg:text-8xl mb-3 text-shadow-md">
+                  <Heading
+                    size="sm"
+                    variant="sectiontitlesm"
+                    className="text-white font-bold mb-1 text-shadow"
+                    asChild={true}
+                  >
+                    <h1>{item.title}</h1>
+                  </Heading>
+
+                  <Heading
+                    size="xxl"
+                    variant="sectiontitlesm"
+                    className="text-white font-bold mb-3 text-shadow-md"
+                  >
                     {item.subtitle}
-                  </motion.h1>
-                  <motion.p className="text-white font-semibold text-md lg:text-xl mb-5 text-shadow">
+                  </Heading>
+                  <Heading
+                    size="sm"
+                    variant="sectiontitlesm"
+                    className="text-white font-semibold mb-5 text-shadow"
+                  >
                     {item.description}
-                  </motion.p>
+                  </Heading>
                   <Button size="lg">
                     <Link href="/tours">Explore all tours</Link>
                   </Button>

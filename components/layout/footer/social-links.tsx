@@ -15,7 +15,7 @@ export default function SocialLinks({ footerdata }: any) {
                     icon={item.icons}
                     width={30}
                     height={30}
-                    className="text-muted-foreground hover:text-primary transition duration-150 ease-out"
+                    className="text-foreground hover:text-primary transition duration-150 ease-out"
                   />
                 </Button>
               </a>

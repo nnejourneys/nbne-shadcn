@@ -42,9 +42,9 @@ export default function TourCoverImage({
         </h1>  
         <h2 className="capitalize text-white text-3xl">{subtitle}</h2>
         <h4 className="capitalize text-white text-xl">{days}</h4> */}
-        <Heading size="xl" variant="sectiontitlesm" className="font-bold">{title}</Heading>
-        <Heading size="md" variant="sectiontitlesm" className="font-semibold">{subtitle}</Heading>
-        <Heading size="sm" variant="sectiontitlesm" className=" ">{days}</Heading>
+        <Heading size="xl" variant="sectiontitlesm" className="uppercase text-white font-bold" asChild={true}><h1>{title}</h1></Heading>
+        <Heading size="md" variant="sectiontitlesm" className="capitalize text-white font-semibold">{subtitle}</Heading>
+        <Heading size="sm" variant="sectiontitlesm" className="capitalize text-white">{days}</Heading>
       </div>
     </div>
   );

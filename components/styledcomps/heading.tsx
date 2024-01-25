@@ -20,6 +20,7 @@ const headingVariants = cva("text-3xl font-bold mb-14", {
       lg: "text-3xl md:text-5xl",
       md: "text-2xl md:text-4xl",
       sm: "text-xl md:text-3xl",
+      xs: "text-lg md:text-xl",
     },
   },
   defaultVariants: {
