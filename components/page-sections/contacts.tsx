@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect } from "react";
 import Contactdata from "@/data/contact.json";
 import { Icon } from "@iconify/react";

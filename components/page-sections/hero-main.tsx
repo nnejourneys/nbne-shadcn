@@ -44,7 +44,7 @@ export default function HeroMain() {
                   <Heading
                     size="xs"
                     className="text-white font-bold mb-1 [text-shadow:_0.5px_0.5px_rgb(0_0_0_/_100%)]"
-                    asChild={true}
+                    asChild={true} 
                   >
                     <h1> {item.title} </h1>
                   </Heading>
