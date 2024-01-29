@@ -42,7 +42,7 @@ export default function TourTypes() {
   return (
     <>
       <Bounded width="marginxy">
-        <Heading variant="sectiontitle">{Tourtypedata.tourtypetitle}</Heading>
+        <Heading variant="sectiontitle" size="md">{Tourtypedata.tourtypetitle}</Heading>
         {/* <Sectiontitle>{Tourtypedata.tourtypetitle}</Sectiontitle> */}
         <div className="grid md:grid-cols-3 gap-4" ref={ref}>
           {Tourtypedata.tourtype.map((item, index) => (

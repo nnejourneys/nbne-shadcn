@@ -70,7 +70,7 @@ export default function EnquiryForm({ title }: any) {
   };
 
   return (
-    <div className="my-1 lg:w-1/2">
+    <div className="my-1 ml-1 lg:w-1/2">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <input id="title" name="title" type="hidden" value={title} />

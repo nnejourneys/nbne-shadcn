@@ -25,12 +25,12 @@ export default function TourSliderCard({
         </AspectRatio>
 
         <div className="tour-list-item absolute top-0 left-0 h-full w-full bg-black/5 ease-in-out duration-300">
-          <p className="absolute top-0 end-0 text-xs bg-primary text-center px-3 py-1">
+          <p className="absolute top-0 end-0 text-white text-xs bg-primary text-center px-3 py-1">
             {cat}
           </p>
           <div className="absolute left-2 bottom-10 translate-y-5 opacity-90 hover:bg-primary p-2">
-            <h5 className="font-bold">{title}</h5>
-            <h6 className="font-light text-xs">{subtitle}</h6>
+            <h5 className="font-bold text-white">{title}</h5>
+            <h6 className="font-light text-xs text-white">{subtitle}</h6>
           </div>
         </div>
       </Link>

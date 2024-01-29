@@ -16,8 +16,8 @@ export default function FooterIntro({footerdata}: any) {
         placeholder="blur"
         blurDataURL={imgblurDataURL}
         alt="logo"
-        width="200"
-        height="136"
+        width="300"
+        height="205"
       />
       <p className="text-foreground mt-3 mb-5 pe-5">{footerdata.content}</p>
     </>

@@ -2,7 +2,7 @@
 import * as React from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import MenuItems from "../../../data/mainmenu.json";
+import MenuItems from "@/data/menu.json";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,33 +12,28 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-import { ModeToggle } from "@/components/ui/mode-toggler";
-import { SheetTrigger } from "@/components/ui/sheet";
+import { ModeToggle } from "@/components/ui/mode-toggler"; 
 
 export default function Navbar() {
   return (
-    
     <NavigationMenu>
       <NavigationMenuList className="flex flex-col md:flex-row me-2">
-        {MenuItems.menu.map((item) => {
+        {MenuItems.menu.mainmenu.map((item) => {
           if (!item.children)
             return (
-              <NavigationMenuItem key={item.id} >
-   
-                   <Link href={item.href} legacyBehavior passHref >
+              <NavigationMenuItem key={item.id}>
+                <Link href={item.href} legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                     {item.title}
                   </NavigationMenuLink>
                 </Link>
-       
-               
               </NavigationMenuItem>
             );
           {
             return (
               <NavigationMenuItem key={item.id}>
                 <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-                <NavigationMenuContent >
+                <NavigationMenuContent>
                   <ul className="w-72">
                     {item.children.map((item) => (
                       <ListItem
@@ -54,7 +49,7 @@ export default function Navbar() {
           }
         })}
       </NavigationMenuList>
-      <ModeToggle/>
+      <ModeToggle />
     </NavigationMenu>
   );
 }

@@ -1,7 +1,5 @@
-// import cn from 'classnames'
-import Link from "next/link";
 import Image, { ImageLoaderProps } from "next/image";
-import { Posts } from "@/.contentlayer/generated";
+import { imgblurDataURL } from "@/lib/constants"; 
 
 export default function PostImage({ src }: ImageLoaderProps) {
   return (
@@ -10,9 +8,11 @@ export default function PostImage({ src }: ImageLoaderProps) {
         <Image
           src={src}
           alt={`image for post`}
+          className="w-auto max-h-96 mx-auto my-10"
           width="720"
           height="480"
-          className="w-full my-10"
+          placeholder="blur"
+          blurDataURL={imgblurDataURL}
         />
       ) : null}
     </>

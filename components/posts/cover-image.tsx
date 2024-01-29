@@ -1,29 +1,22 @@
-// import cn from 'classnames'
-import Link from "next/link";
 import Image from "next/image";
-import { Posts } from "@/.contentlayer/generated";
-import type { ImageLoaderProps } from 'next/image';
+import type { ImageLoaderProps } from "next/image";
+import { imgblurDataURL } from "@/lib/constants";
+import { Skeleton } from "../ui/skeleton";
 
-export default function CoverImage({ src }: ImageLoaderProps ) {
-  // const image = (
-    return (
-    <Image
-      src={src}
-      alt={`Cover Image for  `}
-      width="720"
-      height="480"
-      className="w-full rounded-t-xl"
-    />
+export default function CoverImage({ src }: ImageLoaderProps) {
+  return (
+    <>
+      {src ? (
+        <Image
+          src={src}
+          alt={`Cover Image for blog post`}
+          className="max-h-72 object-cover rounded-t-xl"
+          width="640"
+          height="360"
+          placeholder="blur"
+          blurDataURL={imgblurDataURL}
+        />
+      ) : <Skeleton className="max-h-72 w-full" />}
+    </>
   );
-  // return (
-  //   <div className="sm:mx-0">
-  //     {slug ? (
-  //       <Link href={`${slug}`} aria-label={title}>
-  //         {image}
-  //       </Link>
-  //     ) : (
-  //       image
-  //     )}
-  //   </div>
-  // );
 }

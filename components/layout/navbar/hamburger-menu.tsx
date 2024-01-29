@@ -1,16 +1,11 @@
 import React from "react";
-import { Cross2Icon, TextAlignJustifyIcon } from "@radix-ui/react-icons";
-
+import { TextAlignJustifyIcon } from "@radix-ui/react-icons";
 import {
   Sheet,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Navbar from "./navbar";
-import MenuItems from "../../../data/mainmenu.json";
+import MenuItems from "@/data/menu.json";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -18,28 +13,28 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  NavigationMenuViewport,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { ModeToggle } from "@/components/ui/mode-toggler";
+import { ModeToggle } from "@/components/ui/mode-toggler"; 
+// import ContactBanner from "./contact-banner";
 
 export default function HamburgerMenu() {
   return (
     <>
       <div className="md:hidden my-auto">
+     
         <Sheet>
           <SheetTrigger>
             <TextAlignJustifyIcon className="h-8 w-8 my-auto" />
             <span className="sr-only">Close</span>
           </SheetTrigger>
-          <SheetContent className="w-full">
-            {/* <Navbar /> */}
+          <SheetContent className="w-full"> 
             <ModeToggle />
             <NavigationMenu className="mt-20 mx-auto">
               <NavigationMenuList className="flex flex-col">
-                {MenuItems.menu.map((item) => {
+                {MenuItems.menu.mainmenu.map((item) => {
                   if (!item.children)
                     return (
                       <NavigationMenuItem key={item.id} className="my-5">
@@ -81,7 +76,7 @@ export default function HamburgerMenu() {
                 })}
               </NavigationMenuList>
             </NavigationMenu>
-
+            {/* <ContactBanner /> */}
             {/* end nav */}
           </SheetContent>
         </Sheet>

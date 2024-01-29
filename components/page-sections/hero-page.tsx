@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { imgblurDataURL } from "@/lib/constants";
-import { usePathname } from "next/navigation"; 
+import { usePathname } from "next/navigation";
 import { Heading } from "../styledcomps/heading";
 
 export default function HeroPage() {
@@ -27,12 +27,13 @@ export default function HeroPage() {
       />
 
       <div className="absolute top-[30%] left-1/2 -translate-x-1/2">
-        {/* <h1 className="text-white font-bold text-center uppercase text-3xl md:text-5xl mb-3">
-          {pagetitle}
-        </h1> */}
-        <Heading size="xl" variant="sectiontitlesm" className="text-white font-bold uppercase" asChild={true}>
-           <h1>{pagetitle}</h1>
-          </Heading> 
+        <Heading
+          size="xl"
+          className="text-white font-bold uppercase [text-shadow:_1px_1px_rgb(0_0_0_/_100%)]"
+          asChild={true}
+        >
+          <h1>{pagetitle}</h1>
+        </Heading>
       </div>
     </>
   );

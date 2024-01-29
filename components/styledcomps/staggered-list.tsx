@@ -7,7 +7,7 @@ export default function StaggeredList({
   children: React.ReactNode;
 }) {
   const container = {
-    hidden: { opacity: 1, scale: 0 },
+    hidden: { opacity: 1, scale: 0.5 },
     visible: {
       opacity: 1,
       scale: 1,

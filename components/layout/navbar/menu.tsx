@@ -2,9 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Navbar from "./navbar";
-import ContactBanner from "./contact-banner";
 import HamburgerMenu from "./hamburger-menu";
-import { ModeToggle } from "@/components/ui/mode-toggler";
+import ContactBanner from "./contact-banner";
 
 export default function Menu() {
   const [yValue, setYValue] = useState(0);
@@ -29,25 +28,24 @@ export default function Menu() {
 
   return (
     <>
-   
       <div
         className={
-          "fixed top-0 left-0 right-0 z-30 bg-background/80 backdrop-blur " +
+          "fixed top-0 left-0 right-0 z-30 bg-background/80 backdrop-blur" +
           (toHide && "py-0 h-0 hidden")
         }
       >
-         {/* <ContactBanner /> */}
+        {/* <ContactBanner /> */}
         <div className="container flex justify-between py-1">
           <Image
             src="/images/logo.svg"
             alt="NXNE"
-            className=" "
-            width="75"
-            height="75"
+            className="w-20 h-auto"
+            width="300"
+            height="205"
           />
           <HamburgerMenu />
           <div className="hidden md:flex">
-            <Navbar /> 
+            <Navbar />
           </div>
         </div>
       </div>

@@ -13,6 +13,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import Autoplay from "embla-carousel-autoplay";
 import { Heading } from "../styledcomps/heading";
+import React from "react";
 
 export default function HeroMain() {
   return (
@@ -41,29 +42,25 @@ export default function HeroMain() {
                 />
                 <div className="absolute top-[40%] left-[10%]">
                   <Heading
-                    size="sm"
-                    variant="sectiontitlesm"
-                    className="text-white font-bold mb-1"
+                    size="xs"
+                    className="text-white font-bold mb-1 [text-shadow:_0.5px_0.5px_rgb(0_0_0_/_100%)]"
                     asChild={true}
                   >
-                    <h1 className="text-shadow">{item.title}</h1>
+                    <h1> {item.title} </h1>
                   </Heading>
                   <Heading
-                    size="xxl"
-                    variant="sectiontitlesm"
-                    className="text-white font-bold mb-3"
+                    size="xl"
+                    className="text-white font-bold mb-3 [text-shadow:_1px_1px_rgb(0_0_0_/_100%)]"
+                    
                   >
-                    <h2 className="text-shadow-md">{item.subtitle}</h2>
+                    {item.subtitle}
                   </Heading>
                   <Heading
                     size="sm"
-                    variant="sectiontitlesm"
-                    className="text-white font-semibold mb-5"
+                    className="text-white font-semibold mb-5 [text-shadow:_0.5px_0.5px_rgb(0_0_0_/_100%)]"
+                    asChild={true}
                   >
-                    <h3 className=" text-shadow">
-                      {item.description}
-                    </h3>
-                    
+                    <h3>{item.description}</h3>
                   </Heading>
                   <Button size="lg">
                     <Link href="/tours">Explore all tours</Link>

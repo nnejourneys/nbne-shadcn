@@ -10,9 +10,9 @@ export default function FooterMenu({ footermenu }: any) {
         </h6>
         <ul className="ps-0">
           {footermenu.items.map(
-            (item: { URL: string; name: string }, index: Key) => (
+            (item: { href: string; title: string }, index: Key) => (
               <li key={index} className="-ms-3 group">
-                <a href={item.URL}>
+                <a href={item.href}>
                   <Button variant="link">
                     <svg
                       width="15"
@@ -31,7 +31,7 @@ export default function FooterMenu({ footermenu }: any) {
                     </svg>
 
                     <p className="text-foreground group-hover:text-primary">
-                      {item.name}
+                      {item.title}
                     </p>
                   </Button>
                 </a>

@@ -1,8 +1,6 @@
-import Avatar from "./post-avatar";
 import DateFormatter from "./date-formatter";
 import CoverImage from "./cover-image";
 import Link from "next/link";
-import Image from "next/image";
 import { Posts } from "@/.contentlayer/generated";
 import AvatarPost from "./post-avatar";
 import {
@@ -13,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Button } from "../ui/button";
 
 export default function PostPreview({
   title,
@@ -24,15 +23,7 @@ export default function PostPreview({
 }: Posts) {
   return (
     <Card>
-      <CoverImage
-      src={coverImage!} width={0} 
-        // slug={slug}
-        // title={title}
-               
-        // height={278}
-        // width={556}
-      />
-       
+      <CoverImage src={coverImage} width={0} />
       <CardHeader>
         <CardTitle>
           <Link
@@ -47,7 +38,13 @@ export default function PostPreview({
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <p>{excerpt}</p>
+        <p className="line-clamp-3 mb-3">{excerpt}</p>
+        <Link
+          href={`/posts/${slug}`}
+          className="text-2xl font-semibold hover:text-primary"
+        >
+          <Button>Read more</Button>{" "}
+        </Link>
       </CardContent>
       <CardFooter>
         <AvatarPost author={author} />
