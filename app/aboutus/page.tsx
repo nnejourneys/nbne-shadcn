@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { SITE_TITLE, imgblurDataURL, BASE_PATH } from "@/lib/constants";
+import { imgblurDataURL } from "@/lib/constants";
 import Image from "next/image";
 import Aboutusdata from "@/data/aboutus.json";
 import { Icon } from "@iconify/react";

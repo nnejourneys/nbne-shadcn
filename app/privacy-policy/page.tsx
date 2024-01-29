@@ -7,7 +7,7 @@ export default function Privacypolicy() {
   return (
     <>
       <Bounded width="marginxy">
-        <Heading size="lg" variant="sectiontitlesm" className="mt-10 mb-2">
+        <Heading size="lg" className="mt-10 mb-2">
           Privacy Policy
         </Heading>
         <p className="mb-5 text-xs">Last updated: 19 January 2024</p>
@@ -22,10 +22,10 @@ export default function Privacypolicy() {
           the Service, You agree to the collection and use of information in
           accordance with this Privacy Policy.
         </P>
-        <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+        <Heading size="md" className="mt-10 mb-5">
           Interpretation and Definitions
         </Heading>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Interpretation
         </Heading>
         <P>
@@ -34,7 +34,7 @@ export default function Privacypolicy() {
           shall have the same meaning regardless of whether they appear in
           singular or in plural.
         </P>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Definitions
         </Heading>
         <P>For the purposes of this Privacy Policy:</P>
@@ -92,13 +92,13 @@ export default function Privacypolicy() {
           </li>
         </ul>
 
-        <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+        <Heading size="md" className="mt-10 mb-5">
           Collecting and Using Your Personal Data
         </Heading>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Types of Data Collected
         </Heading>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Personal Data
         </Heading>
         <P>
@@ -114,7 +114,7 @@ export default function Privacypolicy() {
           <li>Address, State, Province, ZIP/Postal code, City</li>
           <li>Usage Data</li>
         </ul>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Usage Data
         </Heading>
         <P>Usage Data is collected automatically when using the Service.</P>
@@ -138,7 +138,7 @@ export default function Privacypolicy() {
           visit our Service or when You access the Service by or through a
           mobile device.
         </P>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Tracking Technologies and Cookies
         </Heading>
         <P>
@@ -239,7 +239,7 @@ export default function Privacypolicy() {
           regarding cookies, please visit our Cookies Policy or the Cookies
           section of our Privacy Policy.
         </P>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           <strong>Use of Your Personal Data</strong>
         </Heading>
         <P>The Company may use Personal Data for the following purposes:</P>
@@ -341,7 +341,7 @@ export default function Privacypolicy() {
           </li>
         </ul>
 
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Retention of Your Personal Data
         </Heading>
         <P>
@@ -360,7 +360,7 @@ export default function Privacypolicy() {
           to retain this data for longer time periods.
         </P>
 
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Transfer of Your Personal Data
         </Heading>
         <P>
@@ -383,10 +383,10 @@ export default function Privacypolicy() {
           organization or a country unless there are adequate controls in place
           including the security of Your data and other personal information.
         </P>
-        <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+        <Heading size="md" className="mt-10 mb-5">
           Disclosure of Your Personal Data
         </Heading>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Business Transactions
         </Heading>
         <P>
@@ -395,7 +395,7 @@ export default function Privacypolicy() {
           Your Personal Data is transferred and becomes subject to a different
           Privacy Policy.
         </P>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Law enforcement
         </Heading>
         <P>
@@ -403,7 +403,7 @@ export default function Privacypolicy() {
           Your Personal Data if required to do so by law or in response to valid
           requests by public authorities (e.g. a court or a government agency).
         </P>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Other legal requirements
         </Heading>
         <P>
@@ -423,7 +423,7 @@ export default function Privacypolicy() {
           <li>Protect against legal liability</li>
         </ul>
 
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Security of Your Personal Data
         </Heading>
         <P>
@@ -433,7 +433,7 @@ export default function Privacypolicy() {
           acceptable means to protect Your Personal Data, We cannot guarantee
           its absolute security.
         </P>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Children&apos;s Privacy
         </Heading>
         <P>
@@ -451,7 +451,7 @@ export default function Privacypolicy() {
           require Your parent&apos;s consent before We collect and use that
           information.
         </P>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Links to Other Websites
         </Heading>
         <P>
@@ -464,7 +464,7 @@ export default function Privacypolicy() {
           We have no control over and assume no responsibility for the content,
           privacy policies or practices of any third party sites or services.
         </P>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Changes to this Privacy Policy
         </Heading>
         <P>
@@ -481,7 +481,7 @@ export default function Privacypolicy() {
           changes. Changes to this Privacy Policy are effective when they are
           posted on this page.
         </P>
-        <Heading size="sm" variant="sectiontitlesm" className="mt-5 mb-3">
+        <Heading size="sm" className="mt-5 mb-3">
           Contact Us
         </Heading>
         <P>

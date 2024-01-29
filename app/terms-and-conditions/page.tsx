@@ -7,7 +7,7 @@ export default function Termsandconditions() {
     <>
       <Bounded width="marginxy">
         <div className="max-w-4xl">
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             Terms and Conditions
           </Heading>
           <P>
@@ -34,7 +34,7 @@ export default function Termsandconditions() {
             capitalization and/or he/she or they, are taken as interchangeable
             and therefore as referring to same.
           </P>
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             Cookies
           </Heading>
           <P>
@@ -49,7 +49,7 @@ export default function Termsandconditions() {
             visiting our website. Some of our affiliate/advertising partners may
             also use cookies.
           </P>
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             License
           </Heading>
           <P>
@@ -117,7 +117,7 @@ export default function Termsandconditions() {
             to use, reproduce, edit and authorize others to use, reproduce and
             edit any of your Comments in any and all forms, formats or media.
           </P>
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             Hyperlinking to our Content
           </Heading>
           <P>
@@ -219,7 +219,7 @@ export default function Termsandconditions() {
             will be allowed for linking absent a trademark license agreement.
           </P>
 
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             IFrames
           </Heading>
           <P>
@@ -227,7 +227,7 @@ export default function Termsandconditions() {
             frames around our Webpages that alter in any way the visual
             presentation or appearance of our Website.
           </P>
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             Content Liability
           </Heading>
           <P>
@@ -238,11 +238,11 @@ export default function Termsandconditions() {
             which infringes, otherwise violates, or advocates the infringement
             or other violation of, any third party rights.
           </P>
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             Your Privacy
           </Heading>
           <P>Please read Privacy Policy</P>
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             Reservation of Rights
           </Heading>
           <P>
@@ -253,7 +253,7 @@ export default function Termsandconditions() {
             By continuously linking to our Website, you agree to be bound to and
             follow these linking terms and conditions.
           </P>
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             Removal of links from our website
           </Heading>
           <P>
@@ -268,7 +268,7 @@ export default function Termsandconditions() {
             ensure that the website remains available or that the material on
             the website is kept up to date.
           </P>
-          <Heading size="md" variant="sectiontitlesm" className="mt-10 mb-5">
+          <Heading size="md" className="mt-10 mb-5">
             Disclaimer
           </Heading>
           <P>

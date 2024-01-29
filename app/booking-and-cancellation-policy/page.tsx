@@ -16,7 +16,7 @@ export default function Privacypolicy() {
     <>
       <Bounded width="marginxy">
         <div className="max-w-4xl mx-auto">
-          <Heading size="md" variant="sectiontitlesm" className="mb-10">
+          <Heading size="md" className="mb-10">
             Booking Policy
           </Heading>
           <ul className="list-circle ml-5 my-10 space-y-4">
@@ -33,7 +33,7 @@ export default function Privacypolicy() {
           </ul>
 
           <Separator />
-          <Heading size="md" variant="sectiontitlesm" className="my-10">
+          <Heading size="md" className="my-10">
             Cancellation Policy
           </Heading>
           <Table>
