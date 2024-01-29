@@ -10,6 +10,7 @@ import {
   SITE_KEYWORDS,
 } from "@/lib/constants";
 import { Toaster } from "@/components/ui/toaster"
+// import { GoogleTagManager } from '@next/third-parties/google'
 
 const montserrat = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -28,11 +29,6 @@ const open_sans = Open_Sans({
 });
 
 export const metadata = {
-  // viewport: {
-  //   width: "device-width",
-  //   initialScale: 1,
-  //   maximumScale: 1,
-  // },
   icons: {
     icon: "/images/favicon.png",
   },
@@ -41,8 +37,8 @@ export const metadata = {
   generator: "Next.js",
   referrer: "origin-when-cross-origin",
   keywords: `${SITE_KEYWORDS}`,
-  authors: [{ name: "Roheen Browne" }, { name: "Mohan Kumar", url: "/" }],
-  creator: "Mohan Kumar",
+  authors: [{ name: "Roheen Browne" }],
+  creator: "Roheen Browne",
   publisher: "Roheen Browne",
   metadataBase: new URL(`${BASE_PATH}`),
   alternates: {
@@ -53,7 +49,7 @@ export const metadata = {
     title: `${SITE_TITLE}`,
     description: `${SITE_DESC}`,
     siteId: "1467726470533754880",
-    creator: "@mogs",
+    creator: "@rbrowne",
     creatorId: "1467726470533754880",
     images: `${BASE_PATH}/og-logo.png`,
   },
@@ -112,6 +108,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${montserrat.variable} ${open_sans.variable}`}
     >
+      {/* <GoogleTagManager gtmId="GTM-XYZ" /> */}
       <body>
         <ThemeProvider
           attribute="class"

@@ -1,4 +1,3 @@
-// "use client";
 import React from "react";
 import { notFound } from "next/navigation";
 import { allTours, Tours } from "contentlayer/generated";
@@ -27,11 +26,8 @@ import { BASE_PATH, SITE_TITLE } from "@/lib/constants";
 export const generateStaticParams = async () =>
   allTours.map((tour) => ({ slug: tour._raw.flattenedPath }));
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => {
-  // const filepath = `tours/${params.slug}`;
-  // const tour = allTours.find((tour) => tour._raw.flattenedPath === filepath);
-  const tour = allTours.find((tour) => tour.slug === params.slug);
-  // if (!tour) throw new Error(`Tour does not exist! ${params.slug}`);
+export const generateMetadata = ({ params }: { params: { slug: string } }) => { 
+  const tour = allTours.find((tour) => tour.slug === params.slug); 
   if (!tour) {
     return {};
   }
@@ -42,8 +38,8 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
     generator: "Next.js",
     referrer: "origin-when-cross-origin",
     keywords: tour.keywords,
-    authors: [{ name: "Roheen Browne" }, { name: "Mohan Kumar", url: "/" }],
-    creator: "Mohan Kumar",
+    authors: [{ name: "Roheen Browne" }],
+    creator: "Roheen Browne",
     publisher: "Roheen Browne",
     metadataBase: new URL(`${BASE_PATH}`),
     alternates: {
@@ -72,11 +68,7 @@ export default async function TourPage({
 }: {
   params: { slug: string };
 }) {
-  // const filepath = `tours/${params.slug}`;
-  // const tour = allTours.find((tour) => tour._raw.flattenedPath === filepath);
-
   const tour = allTours.find((tour) => tour.slug === params.slug);
-
   if (!tour) {
     notFound();
   }
@@ -104,7 +96,7 @@ export default async function TourPage({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Bounded width="marginxy" className="mb-0 overflow-x-hidden">
+        <Bounded width="marginx" className="mb-0 overflow-x-hidden">
           <article className="py-6 prose dark:prose-invert">
             {tour.description && (
               <p className="font-bold text-xl text-center my-10">
@@ -114,7 +106,7 @@ export default async function TourPage({
 
             <div className="inline-block">
               {tour.overview ? (
-                <Card className="w-full md:w-96 min-h-fit float-left mr-0 md:mr-5 mb-5 md:mb-0">
+                <Card className="w-full md:w-96 min-h-fit float-left ml-1 mr-0 md:mr-5 mb-5 md:mb-0">
                   <ul className="divide-y divide-muted p-3">
                     {tour.overview.map((item: any, index) => (
                       <TourOverviewItem
@@ -245,9 +237,7 @@ export default async function TourPage({
             )}
 
             <Separator className="mt-10" />
-            <Heading variant="sectiontitlesm" className="mt-10">
-              Enquire about this tour.
-            </Heading>
+            <Heading className="mt-10">Enquire about this tour.</Heading>
             <EnquiryForm title={tour.title} />
 
             <div className="my-12">
@@ -259,10 +249,7 @@ export default async function TourPage({
               <Separator />
             </div>
 
-            <Heading
-              variant="sectiontitlesm"
-              className="text-semibold capitalize"
-            >
+            <Heading className="text-semibold capitalize">
               Other {tour.tourtype} tours
             </Heading>
           </article>

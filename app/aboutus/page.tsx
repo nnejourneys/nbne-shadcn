@@ -55,7 +55,7 @@ export default function Aboutus() {
       </Bounded>
 
       <Bounded width="marginxy">
-        <Heading variant="sectiontitlesm">
+        <Heading >
           {Aboutusdata.responsibilitytitle}
         </Heading>
         <Heading variant="sectiontitlehalf">

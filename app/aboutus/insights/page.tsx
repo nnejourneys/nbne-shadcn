@@ -23,7 +23,7 @@ export default function Insights() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {Insightsdata.insights.map((item, index) => (
             <Card key={index}>
-              <Heading variant="sectiontitlesm" className="text-center pt-3">
+              <Heading className="text-center pt-3">
                 {item.title}
               </Heading>
               <Image

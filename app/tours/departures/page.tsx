@@ -16,11 +16,7 @@ export default function Departures() {
     <>
     <HeroPage />
       <Bounded width="marginxy">
-        {/* <h1 className="my-20 text-center text-2xl font-black">
-          Fixed Departures 2023
-        </h1> */}
         <Heading size="xl" variant="sectiontitle" > Fixed Departures 2024 </Heading>
-
         <section className="mx-auto">
           <StaggeredList>
             {tours.map((tour, index) => (
