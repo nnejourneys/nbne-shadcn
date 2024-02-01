@@ -6,13 +6,14 @@ import { Icon } from "@iconify/react";
 import { Heading } from "@/components/styledcomps/heading";
 import Bounded from "@/components/styledcomps/bounded";
 import { Card } from "@/components/ui/card";
+import { P } from "@/components/ui/p";
 
 export default function Team() {
   return (
     <>
       <Bounded width="marginxy">
         <Heading variant="sectiontitlehalf">{Teamdata.title}</Heading>
-        <p className="text-justify my-10">{Teamdata.text}</p>
+        <P className="text-justify my-10">{Teamdata.text}</P>
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 row">
           {Teamdata.teammembers

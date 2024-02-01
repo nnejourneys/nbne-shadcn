@@ -218,7 +218,6 @@ export default function Termsandconditions() {
             No use of North by Northeast Journeys&apos;s logo or other artwork
             will be allowed for linking absent a trademark license agreement.
           </P>
-
           <Heading size="md" className="mt-10 mb-5">
             IFrames
           </Heading>

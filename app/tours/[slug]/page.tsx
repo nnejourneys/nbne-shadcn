@@ -26,8 +26,8 @@ import { BASE_PATH, SITE_TITLE } from "@/lib/constants";
 export const generateStaticParams = async () =>
   allTours.map((tour) => ({ slug: tour._raw.flattenedPath }));
 
-export const generateMetadata = ({ params }: { params: { slug: string } }) => { 
-  const tour = allTours.find((tour) => tour.slug === params.slug); 
+export const generateMetadata = ({ params }: { params: { slug: string } }) => {
+  const tour = allTours.find((tour) => tour.slug === params.slug);
   if (!tour) {
     return {};
   }
@@ -104,9 +104,9 @@ export default async function TourPage({
               </p>
             )}
 
-            <div className="inline-block">
+            <div className="flex justify-start gap-4 mb-10">
               {tour.overview ? (
-                <Card className="w-full md:w-96 min-h-fit float-left ml-1 mr-0 md:mr-5 mb-5 md:mb-0">
+                <Card className="w-full md:max-w-96 min-h-fit float-left mx-auto md:mx-0 mr-0 md:mr-5 mb-5 md:mb-0">
                   <ul className="divide-y divide-muted p-3">
                     {tour.overview.map((item: any, index) => (
                       <TourOverviewItem
@@ -119,8 +119,21 @@ export default async function TourPage({
                   </ul>
                 </Card>
               ) : null}
-              {tour.body && <Mdx code={tour.body.code} />}
+
+              {tour.highlights ? (
+                <div>
+                  <Heading>Tour Highlights</Heading>
+                  <ListItem
+                    items={tour.highlights}
+                    renderItem={function (): React.ReactNode {
+                      throw new Error("Function not implemented.");
+                    }}
+                  />
+                </div>
+              ) :  null } 
             </div>
+
+            {tour.body ? <Mdx code={tour.body.code} /> : null}
 
             <div className="grid lg:grid-cols-2 gap-4 mb-10">
               <div>
@@ -130,9 +143,9 @@ export default async function TourPage({
                       {tour.overs ? (
                         <TabsTrigger value="overview">Overview</TabsTrigger>
                       ) : null}
-                      {tour.highlights ? (
+                      {/* {tour.highlights ? (
                         <TabsTrigger value="highlights">Highlights</TabsTrigger>
-                      ) : null}
+                      ) : null} */}
                       {tour.inclusions ? (
                         <TabsTrigger value="inclusions">Inclusions</TabsTrigger>
                       ) : null}
@@ -159,7 +172,7 @@ export default async function TourPage({
                       </TabsContent>
                     ) : null}
 
-                    {tour.highlights ? (
+                    {/* {tour.highlights ? (
                       <TabsContent value="highlights">
                         {tour.highlights && (
                           <ListItem
@@ -170,7 +183,7 @@ export default async function TourPage({
                           />
                         )}
                       </TabsContent>
-                    ) : null}
+                    ) : null} */}
                     {tour.inclusions ? (
                       <TabsContent value="inclusions">
                         {tour.inclusions && (
@@ -212,16 +225,13 @@ export default async function TourPage({
               <div className="mt-10">
                 {tour.faq ? (
                   <>
-                    <Heading
-                      variant="sectiontitlesm"
-                      className="bg-muted p-1 rounded-lg"
-                    >
+                    <p className="bg-muted w-full inline-flex h-9 items-center rounded-lg px-3 py-1 text-xs md:text-sm font-medium mb-3">
                       FAQ
-                    </Heading>
+                    </p>
                     <Accordion type="single" collapsible>
                       {tour.faq.map((item: any, index) => (
                         <AccordionItem key={index} value={item.title}>
-                          <AccordionTrigger className="text-lg font-semibold">
+                          <AccordionTrigger className="text-lg font-semibold px-2">
                             {item.title}
                           </AccordionTrigger>
                           <AccordionContent>{item.text}</AccordionContent>
@@ -248,13 +258,11 @@ export default async function TourPage({
               </h6>
               <Separator />
             </div>
-
-            <Heading className="text-semibold capitalize">
-              Other {tour.tourtype} tours
-            </Heading>
           </article>
         </Bounded>
-        {tour.othertours ? <Othertours othertours={tour.othertours} /> : null}
+        {tour.othertours ? (
+          <Othertours tourtype={tour.tourtype} othertours={tour.othertours} />
+        ) : null}
       </section>
     </>
   );

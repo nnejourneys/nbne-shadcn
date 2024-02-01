@@ -5,6 +5,7 @@ import Image from "next/image";
 import Bounded from "@/components/styledcomps/bounded";
 import { Heading } from "@/components/styledcomps/heading";
 import { Card } from "@/components/ui/card";
+import { P } from "@/components/ui/p";
 
 export default function Insights() {
   return (
@@ -12,12 +13,12 @@ export default function Insights() {
       <Bounded width="marginxy">
         <div className="mb-10">
           <Heading variant="sectiontitlehalf">{Insightsdata.title}</Heading>
-          <p>{Insightsdata.p1}</p>
-          <p>{Insightsdata.p2}</p>
-          <p>
+          <P>{Insightsdata.p1}</P>
+          <P>{Insightsdata.p2}</P>
+          <P className="italic">
             {Insightsdata.p3}&nbsp;{Insightsdata.quote}
             <strong>{Insightsdata.quotetext}</strong>
-          </p>
+          </P>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -35,7 +36,7 @@ export default function Insights() {
                 width="240"
                 height="160"
               />
-              <p className="text-justify p-5">{item.text}</p>
+              <P className="text-justify p-5">{item.text}</P>
             </Card>
           ))}
         </div>

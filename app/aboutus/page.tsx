@@ -6,6 +6,7 @@ import Aboutusdata from "@/data/aboutus.json";
 import { Icon } from "@iconify/react";
 import Bounded from "@/components/styledcomps/bounded";
 import { Heading } from "@/components/styledcomps/heading";
+import { P } from "@/components/ui/p";
 
 export default function Aboutus() {
   return (
@@ -16,7 +17,7 @@ export default function Aboutus() {
             <Heading variant="sectiontitlehalf">
               {Aboutusdata.abouttitle}
             </Heading>
-            <p>{Aboutusdata.abouttext}</p>
+            <P>{Aboutusdata.abouttext}</P>
           </div>
 
           <div className="lg:col-span-5 md:mb-50">
@@ -49,7 +50,7 @@ export default function Aboutus() {
             <Heading variant="sectiontitlehalf" className="text-white">
               {Aboutusdata.visiontitle}
             </Heading>
-            <p className="text-white text-justify">{Aboutusdata.visiontext}</p>
+            <P className="text-white text-justify">{Aboutusdata.visiontext}</P>
           </div>
         </div>
       </Bounded>
@@ -79,7 +80,7 @@ export default function Aboutus() {
             </div>
           ))}
         </div>
-        <p className=" text-justify">{Aboutusdata.responsibilitytext}</p>
+        <P className=" text-justify">{Aboutusdata.responsibilitytext}</P>
       </Bounded>
     </>
   );
