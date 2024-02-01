@@ -1,4 +1,5 @@
 import { type ReactNode } from "react";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
 type ListProps<T> = {
   items: T[];
@@ -7,9 +8,9 @@ type ListProps<T> = {
 
 export function List<T>({ items, renderItem }: ListProps<T>) {
   return (
-    <ul className="divide-y divide-gray-100 pl-0 mb-10">
-      {items.map(renderItem)}
-    </ul>
+    <Table>
+      <TableBody>{items.map(renderItem)} </TableBody>
+    </Table>
   );
 }
 
@@ -21,12 +22,14 @@ export default function ListItem<T extends string | undefined>({
       <List
         items={items}
         renderItem={(item) => (
-          <li
+          <TableRow
             key={item}
-            className="list-[circle] list-inside border-bottom-not-last liststyle mb-0 py-4 pl-1 hover:bg-muted/50"
+            // className="font-medium list-[circle] list-inside"
           >
-            {item}
-          </li>
+            <TableCell>
+              <li className="list-circle">{item}</li>
+            </TableCell>
+          </TableRow>
         )}
       />
     </>

@@ -34,7 +34,10 @@ export default function Menu() {
           (toHide && "py-0 h-0 hidden")
         }
       >
-        {/* <ContactBanner /> */}
+        <div className="hidden md:block">
+          <ContactBanner />
+        </div>
+
         <div className="container flex justify-between py-1">
           <Image
             src="/images/logo.svg"

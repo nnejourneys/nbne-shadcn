@@ -20,12 +20,12 @@ export default function TourCardBody(tour: Tours) {
               width="40"
             />
             <div className="my-auto">
-              <p className="flex text-sm ms-2 mb-0">
+              <p className="flex text-xs ms-2 mb-0">
                 <Icon className="me-2 my-auto" icon="bytesize:flag" />
                 {days}
               </p>
               <Separator className="ms-2 w-32 max-h-px" />
-              <p className="flex text-sm ms-2 mb-0">
+              <p className="flex text-xs ms-2 mb-0">
                 <Icon className="me-2 my-auto" icon="bi:speedometer2" />
                 {cat}
               </p>

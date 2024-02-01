@@ -16,7 +16,7 @@ export default function HeroPage() {
   return (
     <>
       <Image
-        className="object-cover  object-center h-[60vh]"
+        className="object-cover object-center h-[60vh]"
         src={image}
         alt="Cover Image"
         placeholder="blur"
@@ -26,10 +26,11 @@ export default function HeroPage() {
         priority
       />
 
+      <div className="absolute top-0 left-0 w-full h-[60vh] bg-black/20" />
       <div className="absolute top-[30%] left-1/2 -translate-x-1/2">
         <Heading
-          size="xl"
-          className="text-white font-bold uppercase [text-shadow:_1px_1px_rgb(0_0_0_/_100%)]"
+          size="lg"
+          className="text-white text-center font-bold uppercase [text-shadow:_1px_1px_rgb(0_0_0_/_100%)]"
           asChild={true}
         >
           <h1>{pagetitle}</h1>

@@ -3,6 +3,7 @@ import CoverImage from "./cover-image";
 import { H1 } from "../ui/h1";
 import { Posts } from "@/.contentlayer/generated";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import PostImage from "./post-image";
 
 export default function PostHeader({
   title,
@@ -15,11 +16,8 @@ export default function PostHeader({
     <>
       {title && <H1>{title}</H1>}
       {coverImage &&
-      <CoverImage
-        // slug={slug}
-        // title={title}
+      <PostImage 
         src={coverImage}
-        // height={278}
         width={556}
       />}
 

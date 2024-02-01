@@ -18,6 +18,7 @@ import {
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { ModeToggle } from "@/components/ui/mode-toggler"; 
+import ContactBanner from "./contact-banner";
 // import ContactBanner from "./contact-banner";
 
 export default function HamburgerMenu() {
@@ -76,8 +77,7 @@ export default function HamburgerMenu() {
                 })}
               </NavigationMenuList>
             </NavigationMenu>
-            {/* <ContactBanner /> */}
-            {/* end nav */}
+            <ContactBanner /> 
           </SheetContent>
         </Sheet>
       </div>

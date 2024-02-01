@@ -1,12 +1,11 @@
-// import TourProps from "@/types";
-import React from "react";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 
 type AccoProps = {
   meals: string;
   accommodation: string | undefined;
   refreshments: string | undefined;
 };
- 
+
 export default function TouraccoList({
   meals,
   accommodation,
@@ -14,35 +13,41 @@ export default function TouraccoList({
 }: AccoProps) {
   return (
     <>
-      <ul role="list" className="divide-y divide-gray-100">
+      <Table>
         {meals ? (
-          <li className="flex justify-between py-3 hover:bg-muted/50">
-            <p className="my-1">
-              <b className="fw-bolder text-muted-foreground">Meals</b>
-              <br />
-              {meals} 
-            </p>
-          </li>
+          <TableRow>
+            <TableCell>
+              <p>
+                <b className="fw-bolder text-muted-foreground">Meals</b>
+                <br />
+                {meals}
+              </p>
+            </TableCell>
+          </TableRow>
         ) : null}
         {accommodation ? (
-          <li className="flex justify-between py-3 border-bottom-not-last hover:bg-muted/50">
-            <p className="my-1">
-              <b className="fw-bolder text-muted-foreground">Accommodation</b>
-              <br />
-              {accommodation}
-            </p>
-          </li>
+          <TableRow>
+            <TableCell>
+              <p>
+                <b className="fw-bolder text-muted-foreground">Accommodation</b>
+                <br />
+                {accommodation}
+              </p>
+            </TableCell>
+          </TableRow>
         ) : null}
         {refreshments ? (
-          <li className="flex justify-between py-3 border-bottom-not-last hover:bg-muted/50">
-            <p className="my-1">
-              <b className="fw-bolder text-muted-foreground">Refreshments</b>
-              <br />
-              {refreshments}
-            </p>
-          </li>
+          <TableRow>
+            <TableCell>
+              <p>
+                <b className="fw-bolder text-muted-foreground">Refreshments</b>
+                <br />
+                {refreshments}
+              </p>
+            </TableCell>
+          </TableRow>
         ) : null}
-      </ul>
+      </Table>
     </>
   );
 }

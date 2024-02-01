@@ -20,7 +20,7 @@ export default function TourOverviewItem({
           <p>{label}</p>
         </span>
         <span>
-          <p className="font-medium">{data}</p>
+          <p className="font-medium">{data}</p> 
         </span>
       </li>
     </>

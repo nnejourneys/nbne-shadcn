@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Tours } from "@/.contentlayer/generated";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Heading } from "@/components/styledcomps/heading";
 
 export default function TourSliderCard({
   bg_image,
@@ -24,13 +25,13 @@ export default function TourSliderCard({
           />
         </AspectRatio>
 
-        <div className="tour-list-item absolute top-0 left-0 h-full w-full bg-black/5 ease-in-out duration-300">
+        <div className="absolute top-0 left-0 h-full w-full bg-black/20 ease-in-out duration-300">
           <p className="absolute top-0 end-0 text-white text-xs bg-primary text-center px-3 py-1">
             {cat}
           </p>
           <div className="absolute left-2 bottom-10 translate-y-5 opacity-90 hover:bg-primary p-2">
-            <h5 className="font-bold text-white">{title}</h5>
-            <h6 className="font-light text-xs text-white">{subtitle}</h6>
+            <h5 className="font-bold text-white [text-shadow:_1px_1px_rgb(0_0_0_/_100%)]">{title}</h5>
+            <h6 className="font-light text-xs text-white [text-shadow:_1px_1px_rgb(0_0_0_/_100%)]">{subtitle}</h6>
           </div>
         </div>
       </Link>

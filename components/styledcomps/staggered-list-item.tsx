@@ -14,7 +14,7 @@ export default function StaggeredListItem({
   };
   return (
     <>
-      <motion.li variants={staggeritem} className="w-80 lg:w-1/2 staggeritem">
+      <motion.li variants={staggeritem} className="staggeritem flex">
         {children}
       </motion.li>
     </>

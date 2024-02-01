@@ -23,7 +23,7 @@ export default function StaggeredList({
         variants={container}
         initial="hidden"
         animate="visible"
-        className="flex flex-wrap justify-center"
+        className="grid sm:grid-cols-2"
       >
         {children}
       </motion.ul>

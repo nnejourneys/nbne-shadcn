@@ -5,7 +5,8 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
 import Bounded from "../styledcomps/bounded";
-import { Heading } from "../styledcomps/heading"; 
+import { Heading } from "../styledcomps/heading";
+import { P } from "../ui/p";
 
 export default function Region() {
   const { ref, inView } = useInView({ threshold: 0.1 });
@@ -33,29 +34,29 @@ export default function Region() {
       <Bounded width="marginxy">
         <Heading variant="sectiontitle" size="lg">
           The region at a glance
-        </Heading> 
+        </Heading>
         <ul ref={ref} className="region-card-list my-20">
           {Regiondata.accordion.map((item, index) => (
             <motion.li
-              className="row block md:flex md:flex-row even:flex-row-reverse py-20 "
+              className="row block md:flex md:flex-row even:flex-row-reverse gap-8 py-20 "
               key={index}
               animate={animation}
             >
-              <div className={item.classtext}>
+              <div className="w-full md:w-1/2 mb-4">
                 <Heading variant="sectiontitlehalf" size="md">
                   {item.title}
-                </Heading> 
-                <p className="text-justify">{item.text}</p>
+                </Heading>
+                <P className="text-justify">{item.text}</P>
               </div>
-              <div className={item.classimg}>
+              <div className="w-full md:w-1/2">
                 <Image
-                  className="w-full px-5 md:px-10 lg:px-20"
+                  className="w-full"
                   src={item.image}
                   // placeholder="blur"
                   // blurDataURL={imgblurDataURL}
                   alt={item.title}
                   width="480"
-                  height="480" 
+                  height="480"
                 />
               </div>
             </motion.li>

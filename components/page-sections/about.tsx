@@ -10,6 +10,7 @@ import Bounded from "@/components/styledcomps/bounded";
 import { Heading } from "@/components/styledcomps/heading";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { P } from "../ui/p";
 
 export default function About() {
   const { ref, inView, entry } = useInView({ threshold: 0.3 });
@@ -59,9 +60,9 @@ export default function About() {
                       </Heading>
                     </CardHeader>
                     <CardContent>
-                      <p className="text-justify text-white mb-8">
+                      <P className="text-justify text-white mb-8">
                         {Aboutdata.about.text}
-                      </p>
+                      </P>
                       {/* <motion.div whileTap={{ scale: 0.9 }}> */}
                       <Link href={Aboutdata.about.btnlink} className="mt-2">
                         <Button>{Aboutdata.about.btntext}</Button>

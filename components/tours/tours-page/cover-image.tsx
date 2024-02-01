@@ -23,7 +23,7 @@ export default function TourCoverImage({
       blurDataURL={imgblurDataURL}
       className="z-10 bg-cover object-cover bg-center w-[100%] h-[60%] lg:h-full"
       fill
-      priority
+      priority={true}
       sizes="100vw"
     />
   );

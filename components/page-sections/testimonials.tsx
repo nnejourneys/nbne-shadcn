@@ -13,6 +13,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { P } from "../ui/p";
 
 export default function Testimonials() {
   return (
@@ -40,7 +41,7 @@ export default function Testimonials() {
           <CarouselContent>
             {Testimonialdata.testimonials.map((item, index) => (
               <CarouselItem key={index}>
-                <div className="py-24 px-5 md:p-24 mb-10 w-full md:w-[80vw]">
+                <div className="py-24 px-5 md:p-10 lg:p-24 mb-10 md:w-full lg:w-[90vw] xl:w-[80vw]">
                   <div className="md:flex gap-8 mb-6">
                     <Image
                       className="rounded-full block mb-5"
@@ -58,13 +59,13 @@ export default function Testimonials() {
                       <p className="text-muted-foreground">{item.tour}</p>
                     </div>
                   </div>
-                  <p>{item.text}</p>
+                  <P>{item.text}</P>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious className="hidden md:inline-flex" />
-          <CarouselNext className="hidden md:inline-flex" />
+          <CarouselPrevious className="hidden lg:inline-flex" />
+          <CarouselNext className="hidden lg:inline-flex" />
         </Carousel>
       </Bounded>
     </>

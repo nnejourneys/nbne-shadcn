@@ -24,7 +24,7 @@ export default function TouroversList<T>({ items }: ListProps<T>) {
         items={items}
         renderItem={(item: any) => (
           <TableRow>
-            <TableCell className="font-medium">
+            <TableCell >
               <b className="text-muted-foreground">{item.l}</b>
               <p>{item.d}</p>
             </TableCell>

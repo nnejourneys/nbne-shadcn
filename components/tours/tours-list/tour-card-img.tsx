@@ -6,11 +6,8 @@ import { AspectRatio } from "@/components/ui/aspect-ratio"
 
 export default function TourCardImg({ bg_image, title }: Tours) {
   return (
-    <>
-    <div className="w-[420px]">
-
-      <AspectRatio ratio={16 / 9}>
-        {/* <Image src="..." alt="Image" className="rounded-md object-cover" /> */}
+    <> 
+      <AspectRatio ratio={16 / 9}> 
         <Image
           className="object-cover transition duration-500 ease-in-out group-hover:scale-110"
           src={bg_image!}
@@ -21,7 +18,6 @@ export default function TourCardImg({ bg_image, title }: Tours) {
           alt={title!}
         />
       </AspectRatio>
-    </div>
     </>
   );
 }

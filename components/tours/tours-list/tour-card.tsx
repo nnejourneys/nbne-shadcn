@@ -9,7 +9,7 @@ import { Tours } from "@/.contentlayer/generated";
 export default function TourCard(tour: Tours) {
   return (
     <>
-      <div className="group relative grid grid-cols-12 w-fit   bg-clip-border m-2 shadow-sm bg-muted text-muted-foreground">
+      <div className="grow group relative grid grid-cols-12 w-auto bg-clip-border m-2 shadow-sm bg-muted text-muted-foreground">
         <div className="col-span-12 xl:col-span-7 basis-7/12 overflow-hidden z-10">
           <TourCardImg bg_image={tour.bg_image} title={tour.title} _id={""} _raw={{
             sourceFilePath: "",
@@ -41,7 +41,7 @@ export default function TourCard(tour: Tours) {
             }}          />
           <motion.div whileTap={{ scale: 0.99, opacity: 0.5 }}>
             <Link href={`/tours/${tour.slug}`}>
-              <Button className="text-muted">Tour Details</Button>
+              <Button size="sm">Tour Details</Button>
             </Link>
           </motion.div>
         </div>

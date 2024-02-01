@@ -15,7 +15,6 @@ const mdxComponents = {
   h3: H3,
   h4: H4,
   p: P,
- 
 };
 
 interface MdxProps {

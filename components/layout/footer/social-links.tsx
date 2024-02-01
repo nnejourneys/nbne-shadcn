@@ -1,3 +1,4 @@
+"use client"
 import { Icon } from "@iconify/react"; 
 import { Key } from "react";
 import { Button } from "@/components/ui/button";

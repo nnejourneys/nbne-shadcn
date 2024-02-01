@@ -40,6 +40,7 @@ export default function HeroMain() {
                   fill
                   priority={item.load}
                 />
+                <div className="absolute top-0 left-0 w-full h-[60vh] sm:h-[100vh] bg-black/20" />
                 <div className="absolute top-[40%] left-[10%]">
                   <Heading
                     size="xs"
