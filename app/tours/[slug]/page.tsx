@@ -104,7 +104,7 @@ export default async function TourPage({
               </p>
             )}
 
-            <div className="flex justify-start gap-4 mb-10">
+            <div className="flex flex-col md:flex-row justify-start gap-4 mb-10">
               {tour.overview ? (
                 <Card className="w-full md:max-w-96 min-h-fit float-left mx-auto md:mx-0 mr-0 md:mr-5 mb-5 md:mb-0">
                   <ul className="divide-y divide-muted p-3">
